@@ -1,0 +1,15 @@
+{
+  "scripts": {
+   "start": "node server",
+    "server": "nodemon server --prefix api",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "react-hook-form": "^7.53.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
