@@ -4,13 +4,15 @@ import { Link, useParams } from "react-router-dom";
 
 
 export default function SearchPage() {
-  const {search} =useParams();
+  var {search} =useParams();
+  var search2 = search.charAt(0).toUpperCase() + search?.slice(1);
+  console.log(search2);
   const [places, setplaces] = useState([]);
   useEffect(async () => {
     if(!search){
       return;
     }
-   const {data}  = await axios.get('/searchplaces/'+search);
+   const {data}  = await axios.get('/searchplaces/'+search2);
    console.log(data);
    setplaces(data);
 
