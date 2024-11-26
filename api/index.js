@@ -8,9 +8,17 @@ const Place = require('./models/Place.js');
 const Booking = require('./models/Booking.js');
 const cookieParser = require('cookie-parser');
 const download = require('image-downloader');
+const path = require('path');
 const multer  = require('multer');
 const fs = require('fs');
 const app = express();
+
+//static files
+app.use(express.static(path.join(__dirname,'../client/dist')))
+app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname,'../client/dist/index.html'));
+})
+const port = process.env.PORT ||4000; 
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'shgfdjgfhjkyfkghjfkf';
 app.use(express.json());
@@ -200,4 +208,4 @@ app.get('/searchplaces/:search', async(req, res) => {
   res.json(await Place.find({ address: { $regex: search } }));
 });
 
-app.listen(4000);
+app.listen(port);
