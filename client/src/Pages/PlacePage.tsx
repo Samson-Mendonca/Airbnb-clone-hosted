@@ -17,7 +17,7 @@ export default function PlacePage() {
         return;
       }
      const {data}  = await axios.get('/places/'+id);
-     console.log(data);
+     
      setplace(data);
 
     }, [id]);

@@ -19,7 +19,7 @@ setredirect('/');
      
   
  }
-// console.log(subpage);
+
 
 function linkClasses(type=null){
 let classes = ' inline-flex items-center gap-1 mx-2 py-2 px-4 rounded-full border-2 hover:bg-rose-500 hover:text-white transition text-sm ';
