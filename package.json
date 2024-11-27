@@ -3,7 +3,7 @@
    "start": "node server",
     "server": "nodemon server --prefix api",
     "client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
