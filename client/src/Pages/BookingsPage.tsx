@@ -26,7 +26,7 @@ export default function BookingsPage() {
           <div className="w-48">
             
             {booking.place.photos.length > 0 &&(
-                                  <img  className="  object-cover rounded-3xl" src={'http://localhost:4000/uploads/'+booking.place.photos[0]} alt=""/>
+                                  <img  className="  object-cover rounded-3xl" src={'https://airbnb-clone-hosted-backend.onrender.com/uploads/'+booking.place.photos[0]} alt=""/>
 
             )}
           </div>
