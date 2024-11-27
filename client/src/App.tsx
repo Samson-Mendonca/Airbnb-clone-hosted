@@ -12,7 +12,7 @@ import PlacePage from "./Pages/PlacePage"
 import BookingsPage from "./Pages/BookingsPage"
 import SearchPage from "./Pages/SearchPage"
 
-axios.defaults.baseURL = 'http://localhost:4000';
+axios.defaults.baseURL = 'https://airbnb-clone-hosted-backend.onrender.com';
 axios.defaults.withCredentials = true;
 function App() {
  
